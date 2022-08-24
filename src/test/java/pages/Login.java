@@ -29,6 +29,9 @@ public class Login {
     @FindBy(id = "login-failed-div")
     public WebElement yanlisSifre;
 
+    @FindBy(xpath = "(//a[@class='nav-link'])[9]")
+    public WebElement cikisYap;
+
     @FindAll({
             @FindBy(id = "form-login-btn"),
             @FindBy(xpath = "//*[text()='Giriş Yap']")

@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,6 +11,9 @@ public class SatinAl {
     public SatinAl(){
         PageFactory.initElements(Driver.get(),this);
     }
+
+    @FindBy(xpath = "//button[@type='button']/span[@class='d']")
+    public WebElement urunler;
 
     @FindBy(xpath = "(//a[@title='İncele'])[2]")
     public WebElement UrunBir;
@@ -52,5 +56,11 @@ public class SatinAl {
 
     @FindBy(id = "postPayment")
     public WebElement alisverisiTamamla;
+
+    public void satinAlma(String urunAdi) throws InterruptedException {
+        Thread.sleep(1000);
+        urunler.click();
+        Driver.get().findElement(By.xpath("//a[@title='"+urunAdi+"']")).click();
+    }
 
 }

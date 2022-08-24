@@ -18,6 +18,7 @@ public class Test01_LoginTest {
 
     @Then("Kullanici su sayfaya gelmeli {string}")
     public void kullaniciSuSayfayaGelmeli(String string1) {
+        Driver.closeDriver();
         System.out.println("giriş başarılı");
     }
 
@@ -27,10 +28,13 @@ public class Test01_LoginTest {
         login.username.sendKeys(ConfigurationReader.get("username")+1);
         login.password.sendKeys(ConfigurationReader.get("password")+1);
         login.girisYapButonu.click();
+        Driver.closeDriver();
+
     }
 
     @Then("Kullanici su sayfaya gelmeli basarisiz giris {string}")
     public void kullaniciSuSayfayaGelmeliBasarisizGiris(String string2) {
+        Driver.closeDriver();
 
     }
 
@@ -38,6 +42,6 @@ public class Test01_LoginTest {
     public void kullaniciLoginOlmali() throws InterruptedException {
         Thread.sleep(1500);
         login.bekoLogin();
-        Driver.closeDriver();
+
     }
 }
