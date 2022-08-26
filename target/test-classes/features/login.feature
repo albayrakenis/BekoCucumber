@@ -1,15 +1,15 @@
 Feature: Beko login
 
   Background:
-    Given user go to the login page
+    Given Kullanici giris sayfasina gitmeli
 
-  @wip
-  Scenario: positive login test
-    When user enters correct credentials
-    Then user should be in "Secure Area"
+ # @wip
+  Scenario: positif login testi
+    When Kullanici login olmali
+    Then Kullanici su sayfaya gelmeli "Secure Area"
 
-  @wip
-  Scenario: negative login test
-    When user enters wrong credentials
-    Then user should be at "Login Page"
+  # @wip
+  Scenario: negatif login testi
+    When Kullanici yanlis kullanici bilgilerini girmeli
+    Then Kullanici su sayfaya gelmeli basarisiz giris "Login Page"
 
