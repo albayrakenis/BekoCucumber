@@ -15,10 +15,10 @@ public class SatinAl {
     @FindBy(xpath = "//button[@type='button']/span[@class='d']")
     public WebElement urunler;
 
-    @FindBy(xpath = "(//a[@title='İncele'])[2]")
+    @FindBy(xpath = "(//a[@title='İncele'])[1]")
     public WebElement UrunBir;
 
-    @FindBy(xpath = "(//a[@title='İncele'])[4]")
+    @FindBy(xpath = "/html/body/div[2]/main/div/div/div[2]/div[7]/div[2]/div/div[2]/a/div/div[1]/div[3]/figure/img")
     public WebElement UrunDort;
 
     @FindBy(xpath = "//*[button='Taksit Seçenekleri']/button")
@@ -31,7 +31,7 @@ public class SatinAl {
     public WebElement bireyselKart;
 
     @FindBy(xpath = "(//button[@title='Sepete At'])")
-    public WebElement satinAl;
+    public WebElement sepeteAt;
 
     @FindBy(xpath = "(//a[@title='Sepete Git'])")
     public WebElement sepeteGit;
@@ -56,6 +56,13 @@ public class SatinAl {
 
     @FindBy(id = "postPayment")
     public WebElement alisverisiTamamla;
+
+    @FindBy(id = "chk_cart_sum_confirm_1")
+    public WebElement onBilgilendirme;
+
+    @FindBy(id = "chk_cart_sum_confirm_2")
+    public WebElement mesafeliSatisSozlesmesi;
+
 
     public void satinAlma(String urunAdi) throws InterruptedException {
         Thread.sleep(1000);
