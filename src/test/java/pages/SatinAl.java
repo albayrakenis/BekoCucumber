@@ -27,6 +27,8 @@ public class SatinAl {
     @FindBy(id = "nav-commercial-tab")
     public WebElement ticariKart;
 
+
+
     @FindBy(id = "nav-commercial-tab")
     public WebElement bireyselKart;
 

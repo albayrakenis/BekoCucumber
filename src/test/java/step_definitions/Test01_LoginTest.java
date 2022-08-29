@@ -30,6 +30,8 @@ public class Test01_LoginTest {
         login.girisYapButonu.click();
         Driver.closeDriver();
 
+
+
     }
 
     @Then("Kullanici su sayfaya gelmeli basarisiz giris {string}")

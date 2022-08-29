@@ -23,6 +23,8 @@ public class Login {
     @FindBy(id = "j_username")
     public WebElement username;
 
+    @Fsi
+
     @FindBy(id = "j_password")
     public WebElement password;
 
