@@ -3,6 +3,7 @@ package step_definitions;
 import io.cucumber.java.en.*;
 import pages.Bildirimler;
 import pages.SatinAl;
+import utility.Driver;
 
 public class Test03_Bildirimler {
 
@@ -27,7 +28,7 @@ public class Test03_Bildirimler {
     }
     @When("Kullanici bildirimlerim sekmesine tiklamali")
     public void kullanici_bildirimlerim_sekmesine_tiklamali() throws InterruptedException{
-        bildirimler.bildirimIcon.click();
+        bildirimler.bildirimlerim.click();
         Thread.sleep(500);
     }
     @When("Kullanici taleplerim sekmesine tiklamali")
@@ -63,7 +64,8 @@ public class Test03_Bildirimler {
     @Then("Kullanici cikis yap sekmesine tiklamali")
     public void kullanici_cikis_yap_sekmesine_tiklamali() throws InterruptedException {
         bildirimler.cikisYap.click();
-        Thread.sleep(500);
+        Thread.sleep(2000);
+        Driver.closeDriver();
     }
 
 
