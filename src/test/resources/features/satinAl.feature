@@ -1,6 +1,6 @@
 Feature: Urun satin alma
 
-  #@wip
+  @wip
   Scenario: Kredi karti ile urun satin alma
     Given Kullanici giris sayfasina gitmeli
     Given Kullanici login olmali
