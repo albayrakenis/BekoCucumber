@@ -1,7 +1,7 @@
 Feature: Ankastre Listesindeki Urunleri Kontrol
 
 
-  @wip
+  @abc1
   Scenario: Ankastre Kategorisi Ürünleri Kontrol Etme
     Given Kullanici giris sayfasina gitmeli
     When Kullanici urunlere tiklamali
