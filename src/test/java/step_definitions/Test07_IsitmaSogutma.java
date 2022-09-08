@@ -11,6 +11,7 @@ public class Test07_IsitmaSogutma {
     public void kullanici_isitma_sogutma_tiklamali() throws InterruptedException {
 
         byzEsya.plpdeUrunAdiveKategoriEslestirme(byzEsya.IsitmaSogutma,byzEsya.klima);
+
     }
 
 }

@@ -1,8 +1,10 @@
 package step_definitions;
 
 import io.cucumber.java.en.*;
+import org.openqa.selenium.JavascriptExecutor;
 import pages.Bildirimler;
 import pages.SatinAl;
+import utility.BrowserUtils;
 import utility.Driver;
 
 public class Test03_Bildirimler {
@@ -11,9 +13,10 @@ public class Test03_Bildirimler {
 
     @When("Kullanici bildirimleri tiklamali")
     public void kullanici_bildirimleri_tiklamali() throws InterruptedException {
-        Thread.sleep(2500);
+        BrowserUtils.waitFor(2);
         bildirimler.bildirimIcon.click();
         bildirimler.tumunuGor.click();
+
     }
     @When("Kullanici urunlerim sekmesine tiklamali")
     public void kullanici_urunlerim_sekmesine_tiklamali() throws InterruptedException {

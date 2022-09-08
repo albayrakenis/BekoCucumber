@@ -1,6 +1,6 @@
 Feature: Elektronik Listesindeki Urunleri Kontrol
 
-  @wip
+  @abc
   Scenario: Beyaz Esya Kategorisi Ürünleri Kontrol Etme
     Given Kullanici giris sayfasina gitmeli
     When Kullanici urunlere tiklamali

@@ -1,1 +1,0 @@
-file:src/test/resources/features/kucukEvAletleri.feature:4

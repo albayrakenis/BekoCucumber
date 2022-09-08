@@ -9,7 +9,7 @@ public class Test05_Ankastre {
     @When("Kullanici Ankastreyi tiklamali")
     public void kullanici_ankastreyi_tiklamali() throws InterruptedException {
 
-        byzEsya.plpdeUrunAdiveKategoriEslestirme(byzEsya.beyazEsyaButonu,byzEsya.Ankastre);
+        byzEsya.plpdeUrunAdiveKategoriEslestirme(byzEsya.Ankastre,byzEsya.ankastreFirinlar);
 
     }
 }

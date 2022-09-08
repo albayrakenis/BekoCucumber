@@ -92,17 +92,17 @@ public class BeyazEsya {
     @FindBy(xpath = "//a[@title='Su Sebili']")
     public WebElement SuSebiliHeader;
 
-    @FindBy(xpath = "//a[@title='Beyaz Eşya']//img[@class='lazy loaded']")
+    @FindBy(xpath = "(//a[@title='Beyaz Eşya'])[1]")
     public WebElement BeyazEsya;
-    @FindBy(xpath = "//a[@title='Ankastre']//img[@class='lazy loaded']")
+    @FindBy(xpath = "(//a[@title='Ankastre'])[1]")
     public WebElement Ankastre;
-    @FindBy(xpath = "//a[@title='Elektronik']//img[@class='lazy loaded']")
+    @FindBy(xpath = "(//a[@title='Elektronik'])[1]")
     public WebElement Elektronik;
-    @FindBy(xpath = "//a[@title='Isıtma Soğutma']//img[@class='lazy loaded']")
+    @FindBy(xpath = "(//a[@title='Isıtma Soğutma'])[1]")
     public WebElement IsitmaSogutma;
-    @FindBy(xpath = "//a[@title='Küçük Ev Aletleri']//img[@class='lazy loaded']")
+    @FindBy(xpath = "(//a[@title='Küçük Ev Aletleri'])[1]")
     public WebElement KücükEvAletleri;
-    @FindBy(xpath = "//a[@title='Hijyen-Aksesuar']//img[@class='lazy loaded']")
+    @FindBy(xpath = "(//a[@title='Hijyen-Aksesuar'])[1]")
     public WebElement HijyenAksesuar;
 
     @FindBy(xpath = "//div[@class='mnp-header']//button[@class='btn-close']")
@@ -182,6 +182,8 @@ public class BeyazEsya {
     public List <WebElement> urunIsimleri;
 
     public void plpdeUrunAdiveKategoriEslestirme(WebElement kategoriAdi, WebElement urunAdi) throws InterruptedException {
+       // kategoriAdi.click();
+        BrowserUtils.waitFor(1);
         BrowserUtils.hover(kategoriAdi);
         urunAdi.click();
 
@@ -191,6 +193,7 @@ public class BeyazEsya {
             Thread.sleep(2000);
             ((JavascriptExecutor) Driver.get()).executeScript("arguments[0].scrollIntoView(true);", urunIsmi);
             Assert.assertTrue(urunIsmi.getText().toLowerCase().contains(urunAdi.getText()));
+            //Assert.assertTrue(urunIsmi.getText().toLowerCase().contains("x"));
         }
     }
 

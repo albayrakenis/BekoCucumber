@@ -28,11 +28,10 @@ public class Test04_BeyasEsyalar {
     @Then("Plp urunler ve kategori adi ayni olmali")
     public void plp_urunler_ve_kategori_adi_ayni_olmali() throws InterruptedException {
 
+        System.out.println(beyazEsya.urunIsimleri.size());
         for (WebElement urunIsmi : beyazEsya.urunIsimleri) {
-            System.out.println(beyazEsya.urunIsimleri.size());
             System.out.println(urunIsmi.getText());
         }
-
         Driver.closeDriver();
     }
 }
