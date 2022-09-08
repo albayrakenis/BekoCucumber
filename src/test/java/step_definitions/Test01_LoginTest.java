@@ -1,7 +1,9 @@
 package step_definitions;
 
 import io.cucumber.java.en.*;
+import org.openqa.selenium.By;
 import pages.Login;
+import utility.BrowserUtils;
 import utility.ConfigurationReader;
 import utility.Driver;
 
@@ -14,6 +16,11 @@ public class Test01_LoginTest {
     public void kullaniciGirisSayfasinaGitmeli() {
         Driver.get().get(ConfigurationReader.get("url"));
         Driver.get().manage().window().maximize();
+        //bildirimleri kaçırma
+        //Driver.get().findElement(By.id("ins-editable-button-1580496494")).click();
+        //hepsini kabul et
+//        BrowserUtils.waitFor(2);
+//        Driver.get().findElement(By.id("onetrust-accept-btn-handler")).click();
     }
 
     @Then("Kullanici su sayfaya gelmeli {string}")

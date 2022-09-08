@@ -100,8 +100,10 @@ public class BeyazEsya {
     public WebElement Elektronik;
     @FindBy(xpath = "(//a[@title='Isıtma Soğutma'])[1]")
     public WebElement IsitmaSogutma;
-    @FindBy(xpath = "(//a[@title='Küçük Ev Aletleri'])[1]")
+    //@FindBy(xpath = "(//a[@title='Küçük Ev Aletleri'])[1]")
+    @FindBy(xpath = "(//ul/li[@class])[6]")
     public WebElement KücükEvAletleri;
+
     @FindBy(xpath = "(//a[@title='Hijyen-Aksesuar'])[1]")
     public WebElement HijyenAksesuar;
 
@@ -179,6 +181,7 @@ public class BeyazEsya {
     public WebElement temizlikVeBakimUrunleri;
 
     @FindBy(xpath = "(//span[@class='js-prd-cat'])")
+    //@FindBy(xpath = "(//div[@class='swiper-slide slide-active swiper-slide-active'])")
     public List <WebElement> urunIsimleri;
 
     public void plpdeUrunAdiveKategoriEslestirme(WebElement kategoriAdi, WebElement urunAdi) throws InterruptedException {
@@ -187,13 +190,17 @@ public class BeyazEsya {
         BrowserUtils.hover(kategoriAdi);
         urunAdi.click();
 
+        WebElement solPanel =Driver.get().findElement(By.xpath("//div[@class='pnl-left']/h1"));
+        //System.out.println(solPanel.getText());
+        String s = kategoriAdi.getText().toLowerCase();
+        Assert.assertEquals(s,solPanel.getText().toLowerCase());
 
         for (WebElement urunIsmi : urunIsimleri) {
-            //System.out.println(urunIsmi.getText());
-            Thread.sleep(2000);
+//
+            BrowserUtils.waitFor(1);
+//            BrowserUtils.scrollToElement(urunIsmi);
             ((JavascriptExecutor) Driver.get()).executeScript("arguments[0].scrollIntoView(true);", urunIsmi);
-            Assert.assertTrue(urunIsmi.getText().toLowerCase().contains(urunAdi.getText()));
-            //Assert.assertTrue(urunIsmi.getText().toLowerCase().contains("x"));
+
         }
     }
 

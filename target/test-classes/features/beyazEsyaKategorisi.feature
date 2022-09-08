@@ -1,6 +1,6 @@
 Feature: Beyaz Esya Listesindeki Urunleri Kontrol
 
-  @abc
+  @abc2
   Scenario: Beyaz Esya Kategorisi Ürünleri Kontrol Etme
     Given Kullanici giris sayfasina gitmeli
     When Kullanici urunlere tiklamali

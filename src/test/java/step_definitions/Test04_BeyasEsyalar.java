@@ -21,7 +21,9 @@ public class Test04_BeyasEsyalar {
     @When("Kullanici {string} tiklamali")
     public void kullanici_tiklamali(String string) throws InterruptedException {
 
-        beyazEsya.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.buzdolabi);
+        //beyazEsya.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.buzdolabi);
+        beyazEsya.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.derinDondurucu);
+        beyazEsya.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.bulasikMakinesi);
 
     }
 
