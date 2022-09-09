@@ -1,6 +1,6 @@
 Feature: Isıtma Sogutma Listesindeki Urunleri Kontrol
 
-  @abc
+  @abcef
   Scenario: Isıtma Sogutma Kategorisi Ürünleri Kontrol Etme
     Given Kullanici giris sayfasina gitmeli
     When Kullanici urunlere tiklamali

@@ -13,7 +13,7 @@ public class Test06_Elektronik {
     @When("Kullanici Elektronik tiklamali")
     public void kullanici_elektronik_tiklamali() throws InterruptedException {
 
-        byzEsya.plpdeUrunAdiveKategoriEslestirme(byzEsya.Elektronik,byzEsya.televizyon);
+
 
     }
 }

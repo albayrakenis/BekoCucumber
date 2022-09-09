@@ -21,14 +21,12 @@ public class Test04_BeyasEsyalar {
     @When("Kullanici {string} tiklamali")
     public void kullanici_tiklamali(String string) throws InterruptedException {
 
-        //beyazEsya.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.buzdolabi);
-        beyazEsya.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.derinDondurucu);
-        beyazEsya.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.bulasikMakinesi);
 
     }
 
     @Then("Plp urunler ve kategori adi ayni olmali")
     public void plp_urunler_ve_kategori_adi_ayni_olmali() throws InterruptedException {
+
 
         System.out.println(beyazEsya.urunIsimleri.size());
         for (WebElement urunIsmi : beyazEsya.urunIsimleri) {

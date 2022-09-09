@@ -11,8 +11,5 @@ public class Test08_KucukEvAletleri {
     @When("Kullanici Kucuk Ev Aletleri tiklamali")
     public void kullanici_kucuk_ev_aletleri_tiklamali() throws InterruptedException {
 
-        byzEsya.plpdeUrunAdiveKategoriEslestirme(byzEsya.KücükEvAletleri,byzEsya.supurge);
-       // byzEsya.plpdeUrunAdiveKategoriEslestirme(byzEsya.KücükEvAletleri,byzEsya.utu);
-
     }
 }

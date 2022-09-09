@@ -10,7 +10,7 @@ public class Test07_IsitmaSogutma {
     @When("Kullanici Isitma Sogutma tiklamali")
     public void kullanici_isitma_sogutma_tiklamali() throws InterruptedException {
 
-        byzEsya.plpdeUrunAdiveKategoriEslestirme(byzEsya.IsitmaSogutma,byzEsya.klima);
+
 
     }
 
