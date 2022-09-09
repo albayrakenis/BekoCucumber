@@ -16,18 +16,19 @@ public class Methodlar {
 
 
     public void getText(WebElement element){
+
         System.out.println(" Ürün adı "+element.getText().toLowerCase());
     }
 
     public void plpdeUrunAdiveKategoriEslestirme(WebElement kategoriAdi, WebElement urunAdi) throws InterruptedException {
-        // kategoriAdi.click();
-        BrowserUtils.waitFor(1);
+
+        BrowserUtils.verifyElementDisplayed(kategoriAdi);
         BrowserUtils.hover(kategoriAdi);
         urunAdi.click();
+        System.out.println(byzEsya.solPanel.getSize());
+        BrowserUtils.waitFor(3);
 
-        for (WebElement urunIsmi : byzEsya.urunIsimleri) {
 
 
-        }
     }
 }

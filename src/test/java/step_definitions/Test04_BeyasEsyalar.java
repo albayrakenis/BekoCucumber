@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import pages.BeyazEsya;
+import pages.Methodlar;
 import utility.BrowserUtils;
 import utility.Driver;
 
@@ -22,6 +23,10 @@ public class Test04_BeyasEsyalar {
     public void kullanici_tiklamali(String string) throws InterruptedException {
 
 
+        Methodlar method = new Methodlar();
+        method.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.buzdolabi);
+       // method.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.camasirMakinesi);
+
     }
 
     @Then("Plp urunler ve kategori adi ayni olmali")
@@ -30,8 +35,29 @@ public class Test04_BeyasEsyalar {
 
         System.out.println(beyazEsya.urunIsimleri.size());
         for (WebElement urunIsmi : beyazEsya.urunIsimleri) {
-            System.out.println(urunIsmi.getText());
+
+
+            Assert.assertTrue(urunIsmi.getText().toLowerCase().contains(beyazEsya.solPanel.getText().toLowerCase()));
         }
         Driver.closeDriver();
+    }
+
+    @And("Kullanici derinDondurucu tiklamali")
+    public void kullaniciDerinDondurucuTiklamali() throws InterruptedException {
+        Methodlar method = new Methodlar();
+        method.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.derinDondurucu);
+
+    }
+
+    @And("Kullanici bulasikMakinesi tiklamali")
+    public void kullaniciBulasikMakinesiTiklamali() throws InterruptedException {
+        Methodlar method = new Methodlar();
+        method.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.bulasikMakinesi);
+    }
+
+    @And("Kullanici camasir makinesi tiklamali")
+    public void kullaniciCamasirMakinesiTiklamali() throws InterruptedException {
+        Methodlar method = new Methodlar();
+        method.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.camasirMakinesi);
     }
 }
