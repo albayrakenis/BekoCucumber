@@ -27,7 +27,7 @@ public class BeyazEsya {
     public WebElement urunler;
 
 
-    @FindBy(xpath = "//span[text()='Beyaz Eşya']")
+    @FindBy(xpath = "(//ul/li[@class])[2]")
     public WebElement beyazEsyaButonu;
 
     @FindBy(xpath = "(//a[@href='/bulasik-makinesi'])[1]")
@@ -92,19 +92,19 @@ public class BeyazEsya {
     @FindBy(xpath = "//a[@title='Su Sebili']")
     public WebElement SuSebiliHeader;
 
-    @FindBy(xpath = "(//a[@title='Beyaz Eşya'])[1]")
+    @FindBy(xpath = "(//ul/li[@class])[2]")
     public WebElement BeyazEsya;
-    @FindBy(xpath = "(//a[@title='Ankastre'])[1]")
+    @FindBy(xpath = "(//ul/li[@class])[3]")
     public WebElement Ankastre;
-    @FindBy(xpath = "(//a[@title='Elektronik'])[1]")
+    @FindBy(xpath = "(//ul/li[@class])[4]")
     public WebElement Elektronik;
-    @FindBy(xpath = "(//a[@title='Isıtma Soğutma'])[1]")
+    @FindBy(xpath = "(//ul/li[@class])[5]")
     public WebElement IsitmaSogutma;
     //@FindBy(xpath = "(//a[@title='Küçük Ev Aletleri'])[1]")
     @FindBy(xpath = "(//ul/li[@class])[6]")
     public WebElement KücükEvAletleri;
 
-    @FindBy(xpath = "(//a[@title='Hijyen-Aksesuar'])[1]")
+    @FindBy(xpath = "(//ul/li[@class])[7]")
     public WebElement HijyenAksesuar;
 
     @FindBy(xpath = "//div[@class='mnp-header']//button[@class='btn-close']")
@@ -179,30 +179,12 @@ public class BeyazEsya {
     public WebElement aksesuarlar;
     @FindBy(xpath = "//a[@title='Temizlik Ve Bakım Ürünleri']")
     public WebElement temizlikVeBakimUrunleri;
+    @FindBy(xpath = "//div[@class='pnl-left']/h1")
+    public WebElement solPanel;
 
     @FindBy(xpath = "(//span[@class='js-prd-cat'])")
     //@FindBy(xpath = "(//div[@class='swiper-slide slide-active swiper-slide-active'])")
     public List <WebElement> urunIsimleri;
-
-    public void plpdeUrunAdiveKategoriEslestirme(WebElement kategoriAdi, WebElement urunAdi) throws InterruptedException {
-       // kategoriAdi.click();
-        BrowserUtils.waitFor(1);
-        BrowserUtils.hover(kategoriAdi);
-        urunAdi.click();
-
-        WebElement solPanel =Driver.get().findElement(By.xpath("//div[@class='pnl-left']/h1"));
-        //System.out.println(solPanel.getText());
-        String s = kategoriAdi.getText().toLowerCase();
-        Assert.assertEquals(s,solPanel.getText().toLowerCase());
-
-        for (WebElement urunIsmi : urunIsimleri) {
-//
-            BrowserUtils.waitFor(1);
-//            BrowserUtils.scrollToElement(urunIsmi);
-            ((JavascriptExecutor) Driver.get()).executeScript("arguments[0].scrollIntoView(true);", urunIsmi);
-
-        }
-    }
 
 
     //parantez içine yazdığım webelemente gidip kategori adının doğru olmasını kontrol ediyor.
