@@ -25,8 +25,9 @@ public class Methodlar {
         BrowserUtils.verifyElementDisplayed(kategoriAdi);
         BrowserUtils.hover(kategoriAdi);
         urunAdi.click();
-        System.out.println(byzEsya.solPanel.getSize());
+        System.out.println("Kategori adı: "+byzEsya.solPanel.getText());
         BrowserUtils.waitFor(3);
+
 
 
 
