@@ -60,4 +60,42 @@ public class Test04_BeyasEsyalar {
         Methodlar method = new Methodlar();
         method.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.camasirMakinesi);
     }
+
+    @And("Kullanici kurutma makinesi tiklamali")
+    public void kullaniciKurutmaMakinesiTiklamali() throws InterruptedException {
+        Methodlar method = new Methodlar();
+        method.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.kurutmaMakinesi);
+
+    }
+
+    @And("Kullanici kurutmali camasir makinesi tiklamali")
+    public void kullaniciKurutmaliCamasirMakinesiTiklamali() throws InterruptedException {
+        Methodlar method = new Methodlar();
+        method.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.kurutmaliCamasirMakinesi);
+
+    }
+
+    @And("Kullanici firin tiklamali")
+    public void kullaniciFirinTiklamali() throws InterruptedException {
+        Methodlar method = new Methodlar();
+        method.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.firin);
+
+
+    }
+
+    @And("Kullanici set ustu tiklamali")
+    public void kullaniciSetUstuTiklamali() throws InterruptedException {
+        Methodlar method = new Methodlar();
+        method.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.setUstuOcak);
+
+
+    }
+
+    @And("Kullanici mikrodalga tiklamali")
+    public void kullaniciMikrodalgaTiklamali() throws InterruptedException {
+        Methodlar method = new Methodlar();
+        method.plpdeUrunAdiveKategoriEslestirme(beyazEsya.beyazEsyaButonu, beyazEsya.mikrodalgaFirin);
+
+
+    }
 }
